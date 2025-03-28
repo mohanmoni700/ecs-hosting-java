@@ -25,6 +25,10 @@ jobs:
           aws ecr get-login-password --region ${{ secrets.AWS_REGION }} | \
           docker login --username AWS --password-stdin ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com
 
+      - name: mvn build
+        run: |
+          mvn clean install -DskipTests=true
+
       - name: Build Docker image
         run: docker build -t ${{ secrets.ECR_REPOSITORY }} .
 
