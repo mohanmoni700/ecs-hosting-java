@@ -10,6 +10,6 @@ public class TestController {
 
     @GetMapping  // Handles GET requests to "/test"
     public String getTestMessage() {
-        return "testing.New.Version3";  // Returns "testing" as the response
+        return "testing.New.Version4";  // Returns "testing" as the response
     }
 }
