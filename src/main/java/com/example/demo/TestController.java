@@ -10,6 +10,6 @@ public class TestController {
 
     @GetMapping  // Handles GET requests to "/test"
     public String getTestMessage() {
-        return "testing.New.Version4";  // Returns "testing" as the response
+        return "testing my autoscaling with loadbalancer in ecs";  // Returns "testing" as the response
     }
 }
